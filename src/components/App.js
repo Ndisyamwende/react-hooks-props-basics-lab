@@ -11,8 +11,15 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+       {/* Pass user data to the Home component */}
+       <Home name={user.name} city={user.city} />
+
+{/* Pass bio, github, and linkedin to the About component */}
+<About
+  bio={user.bio}
+  github={user.links.github}
+  linkedin={user.links.linkedin}
+/>
     </div>
   );
 }
